@@ -1,0 +1,11 @@
+.sitefoot {
+  background-color: #0d141c;
+  color: grey;
+  font-size: smaller;
+}
+
+.sitefoot__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 120px;
+}

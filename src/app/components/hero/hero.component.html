@@ -1,0 +1,15 @@
+<section class="banner section">
+  <div class="container banner__wrap">
+    <p class="banner__eyebrow">{{ eyebrow() }}</p>
+    <h1>{{ title() }}</h1>
+    <p class="banner__tagline">{{ tagline() }}</p>
+    <button type="button" class="btn btn-primary" (click)="fireAction()">
+      {{ ctaText() }}
+    </button>
+    <p class="banner__cta-note">{{ ctaHint() }}</p>
+    <img
+      src="https://prium.github.io/Posh/v2.1.0/assets/images/showcase-01.jpg"
+      alt="Preview screenshot"
+    />
+  </div>
+</section>

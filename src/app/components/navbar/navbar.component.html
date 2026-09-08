@@ -1,0 +1,34 @@
+<header class="topnav">
+  <div class="container topnav__row">
+    <a routerLink="/" class="topnav__logo" (click)="collapse()">
+      <img
+        src="https://prium.github.io/Posh/v2.1.0/assets/images/posh-logo.png"
+        alt="Posh logo"
+        class="topnav__logo-img"
+      />
+    </a>
+
+    <nav class="topnav__menu" [class.topnav__menu--expanded]="expanded()">
+      @for (entry of menuEntries; track entry.route + entry.title) {
+        <a
+          [routerLink]="entry.route"
+          routerLinkActive="nav-current"
+          [routerLinkActiveOptions]="{ exact: entry.route === '/' }"
+          (click)="collapse()"
+        >
+          {{ entry.title }}
+        </a>
+      }
+    </nav>
+
+    <button
+      type="button"
+      class="topnav__burger"
+      [attr.aria-expanded]="expanded()"
+      aria-label="Toggle navigation menu"
+      (click)="toggle()"
+    >
+      {{ expanded() ? '✕' : '☰' }}
+    </button>
+  </div>
+</header>

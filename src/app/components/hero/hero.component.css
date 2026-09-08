@@ -1,0 +1,37 @@
+.banner {
+  background: linear-gradient(180deg, var(--color-bg-alt), #fff);
+  text-align: center;
+}
+
+.banner__wrap {
+  max-width: 1110px;
+}
+
+.banner h1 {
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+.banner button {
+  background-color: #007aff;
+  border-radius: 4px;
+  font-size: smaller;
+  margin-top: 50px;
+}
+
+.banner__eyebrow {
+  font-size: 1.15rem;
+  margin-bottom: 2em;
+}
+
+.banner__tagline {
+  color: gray;
+}
+
+.banner__cta-note {
+  font-size: smaller;
+}
+
+.banner img {
+  width: 100%;
+}

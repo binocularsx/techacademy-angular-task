@@ -1,0 +1,32 @@
+.demo-grid {
+  background-color: #0d141c;
+  width: 100%;
+  column-count: 3;
+  justify-content: center;
+  padding: 5px 15px;
+}
+
+.demo-tile {
+  break-inside: avoid;
+  cursor: pointer;
+}
+
+.demo-tile__title {
+  color: white;
+  font-size: medium;
+  text-align: center;
+  font-weight: normal;
+}
+
+.demo-tile__subtitle {
+  color: white;
+  font-size: small;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 0.25rem;
+}
+
+.demo-tile img {
+  width: 100%;
+  height: auto;
+}

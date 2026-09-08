@@ -1,0 +1,69 @@
+<section class="inquiry-section" id="contact">
+  <div class="container inquiry">
+    <div class="inquiry__header">
+      <h2>Get In Touch</h2>
+      <p>Have a question? Send a message and we'll get back to you.</p>
+    </div>
+
+    @if (!sent()) {
+      <form
+        [formGroup]="inquiryForm"
+        (ngSubmit)="handleSubmit()"
+        class="inquiry__form"
+        novalidate
+      >
+        <div class="inquiry__field">
+          <label for="fullName">Name</label>
+          <input id="fullName" type="text" formControlName="fullName" />
+          @if (fullName.invalid && fullName.touched) {
+            <span class="inquiry__error">
+              @if (fullName.hasError('required') || fullName.hasError('blank')) {
+                Please enter your name.
+              }
+            </span>
+          }
+        </div>
+
+        <div class="inquiry__field">
+          <label for="emailAddress">Email</label>
+          <input id="emailAddress" type="email" formControlName="emailAddress" />
+          @if (emailAddress.invalid && emailAddress.touched) {
+            <span class="inquiry__error">
+              @if (emailAddress.hasError('required')) {
+                Email is required.
+              } @else if (emailAddress.hasError('invalidEmail')) {
+                Please enter a valid email address.
+              }
+            </span>
+          }
+        </div>
+
+        <div class="inquiry__field">
+          <label for="body">Message</label>
+          <textarea id="body" rows="4" formControlName="body"></textarea>
+          @if (body.invalid && body.touched) {
+            <span class="inquiry__error">
+              @if (body.hasError('required') || body.hasError('blank')) {
+                Please write a short message.
+              } @else if (body.hasError('minlength')) {
+                Message should be at least 10 characters.
+              }
+            </span>
+          }
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!inquiryForm.valid">
+          Send Message
+        </button>
+      </form>
+    } @else {
+      <div class="inquiry__thanks">
+        <h3>Thanks! Your message is on its way!</h3>
+        <p>We'll get back to you as soon as we can.</p>
+        <button type="button" class="btn btn-primary" (click)="resetForm()">
+          Send another message
+        </button>
+      </div>
+    }
+  </div>
+</section>

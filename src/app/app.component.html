@@ -1,0 +1,6 @@
+<app-navbar (menuStateChanged)="handleNavToggle($event)"></app-navbar>
+<main [class.nav-expanded]="navExpanded()">
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>

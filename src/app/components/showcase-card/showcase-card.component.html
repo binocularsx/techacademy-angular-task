@@ -1,0 +1,7 @@
+<div class="demo-tile" (click)="raiseSelect()">
+  <h3 class="demo-tile__title">{{ card().title }}</h3>
+  @if (card().subtitle; as sub) {
+    <h4 class="demo-tile__subtitle">{{ sub }}</h4>
+  }
+  <img [src]="card().image" [alt]="card().title + ' screenshot'" />
+</div>

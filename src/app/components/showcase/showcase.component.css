@@ -1,0 +1,53 @@
+.demo-strip {
+  background-color: #0d141c;
+  text-align: center;
+  width: 100%;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+.demo-rule {
+  text-align: center;
+}
+
+.demo-lead {
+  font-size: 30px;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+}
+
+.demo-lead__accent {
+  font-weight: bold;
+}
+
+.demo-rule__line {
+  height: 2px;
+  width: 75px;
+  display: inline-block;
+  background-color: gray;
+  margin-top: 1.5rem;
+}
+
+.demo-picked {
+  color: #e1d4ad;
+  margin-top: 1.5rem;
+}
+
+.perks {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  color: #cfd6df;
+  font-size: 0.9rem;
+}
+
+.perks li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
