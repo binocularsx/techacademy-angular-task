@@ -15,7 +15,7 @@ Then open `http://localhost:4200/`.
 
 ## How the page was split into components
 
-## 5. Routing
+Routing
 
 - app.routes.ts defines two lazy-loaded routes: '' (Home) and
   'about' (About), plus a wildcard redirect back to Home.
